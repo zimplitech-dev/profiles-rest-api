@@ -14,6 +14,9 @@ router.register(
 urlpatterns = [
     path("hello-view/", views.HelloApiView.as_view()),  # This is to register API Views
     path(
+        "login/", views.UserLoginApiView.as_view()
+    ),  # This is to enable the login endpoint on the Django REST Framework
+    path(
         "", include(router.urls)
     ),  # This is to register ViewSet -- Note: "" refers to empty prefix on the urls
 ]
