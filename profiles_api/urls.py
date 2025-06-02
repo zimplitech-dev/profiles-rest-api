@@ -10,6 +10,7 @@ router.register("hello-viewset", views.HelloViewSet, base_name="hello-viewset")
 router.register(
     "profile", views.UserProfileViewSet
 )  # No need to specify base_name because in views.py, we have queryset object and Django framework can know by itself!
+router.register("feed", views.UserProfileFeedViewSet)
 
 urlpatterns = [
     path("hello-view/", views.HelloApiView.as_view()),  # This is to register API Views
